@@ -1,71 +1,48 @@
+# Code Weave Visualizer
 
-# Welcome to CodeCraft
+A web application for visualizing and interacting with data structures and sorting algorithms. Easily explore how arrays and linked lists work, and see step-by-step animations of popular sorting algorithms.
 
-## Project info
+## Features
 
-This is a code visualization and learning platform that helps users understand algorithms and data structures through interactive visualizations.
+- Visualize arrays and linked lists
+- Step-by-step sorting algorithm animations (Bubble, Insertion, Selection, Merge, Quick Sort)
+- Adjustable speed and data size
+- Code and complexity tabs for each algorithm
 
-## How can I edit this code?
+## Getting Started
 
-There are several ways of editing your application.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (v16 or higher recommended)
+- npm
 
-If you want to work locally using your own IDE, you can clone this repo and push changes.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
 
-Follow these steps:
+```bash
+git clone https://github.com/sathvikm22/CodeWeave.git
+cd CodeWeave
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. Install dependencies:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+```bash
 npm i
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Running the App
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Visit [http://localhost:8080](http://localhost:8080) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Building for Production
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-You can deploy this project to any hosting platform that supports Node.js applications, such as:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS Amplify
-- Render
-- Heroku
-
-## Can I connect a custom domain to my project?
-
-Yes, you can! Most hosting providers offer options to connect custom domains to your deployed applications.
+```bash
+npm run build
+```
