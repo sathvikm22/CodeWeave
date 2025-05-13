@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+
+    --primary: 0 85.6% 67.8%; /* Updated to RedOrange #FF5349 */
+    --primary-foreground: 60 9.1% 97.8%;
+
+    --secondary: 0 75% 62%; /* Slightly darker RedOrange */
+    --secondary-foreground: 60 9.1% 97.8%;
+
+    --accent: 0 85.6% 67.8%; /* Same as primary */
+    --accent-foreground: 60 9.1% 97.8%;
+
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 3.2% 42.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 0 85.6% 67.8%; /* Same as primary */
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 15 30% 96%;
+    --sidebar-foreground: 20 14.3% 4.1%;
+    --sidebar-primary: 0 85.6% 67.8%; /* Same as primary */
+    --sidebar-primary-foreground: 60 9.1% 97.8%;
+    --sidebar-accent: 0 85.6% 67.8%; /* Same as primary */
+    --sidebar-accent-foreground: 60 9.1% 97.8%;
+    --sidebar-border: 25 30% 91.4%;
+    --sidebar-ring: 0 85.6% 67.8%; /* Same as primary */
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+
+    --primary: 0 85.6% 67.8%; /* Updated to RedOrange #FF5349 */
+    --primary-foreground: 60 9.1% 97.8%;
+
+    --secondary: 0 75% 62%; /* Slightly darker RedOrange */
+    --secondary-foreground: 60 9.1% 97.8%;
+
+    --accent: 0 85.6% 67.8%; /* Same as primary */
+    --accent-foreground: 60 9.1% 97.8%;
+
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 0 85.6% 67.8%; /* Same as primary */
+    
+    --sidebar-background: 12 6.5% 10.1%;
+    --sidebar-foreground: 60 9.1% 97.8%;
+    --sidebar-primary: 0 85.6% 67.8%; /* Same as primary */
+    --sidebar-primary-foreground: 60 9.1% 97.8%;
+    --sidebar-accent: 0 85.6% 67.8%; /* Same as primary */
+    --sidebar-accent-foreground: 60 9.1% 97.8%;
+    --sidebar-border: 12 6.5% 20.1%;
+    --sidebar-ring: 0 85.6% 67.8%; /* Same as primary */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .nav-link {
+    @apply flex items-center gap-1.5 font-medium;
+  }
+  
+  .data-structure-item {
+    @apply flex items-center gap-2 p-2 rounded-md transition-colors hover:bg-accent/10;
+  }
+
+  .animate-pop-in {
+    animation: pop-in 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  @keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .glass-card {
+    @apply backdrop-blur-sm bg-white/50 dark:bg-black/20 border border-white/20 dark:border-white/10 shadow-xl;
+  }
+  
+  .tree-node {
+    @apply flex items-center justify-center border-2 text-base font-medium h-12 w-12 rounded-full transition-all duration-300;
+  }
+
+  /* Card flip animations - Enhanced */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Additional styles for auth page cards */
+.auth-card {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.5s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
